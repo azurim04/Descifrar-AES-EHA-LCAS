@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cifrado AES</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form id="formulario" method="POST" encType="multipart/form-data">
+            <article>Selecciona que Longitud de clave desea utilizar</article>
+            <div class="radios">
+                <input type="radio" checked name="bits" id="128">
+                <label>128 bits</label>
+                <input type="radio" name="bits" id="192">
+                <label>192 bits</label>
+                <input type="radio" name="bits" id="256">
+                <label>256 bits</label>
+            </div>
+            <article>Texto cifrado / a descifrar</article>
+            <input name="Texto" id="Texto" type="file" accept="text/plain" class="file" />
+            <article>Clave para cifrar / descifrar</article>
+            <input name="clave" id="clave" class="file" maxlength="32" placeholder="Ingrese la contraseña para cifrar" onpaste="return false;" ondrop="return false;" minlength="16" onkeyup="countChars(this);" />
+            <p id="charNum"></p>
+            <br>
+            <input type="submit" onclick="validarDescifrado(event)" value="Descifrar">
+            <article>
+                Trabajo realizado por:<br> Elizalde Hernández Alan<br>López Castillo Azurim Sua<br>
+            </article>
+            <a href="https://github.com/alaneh/AES-EHA-LCAS">Repositorio del proyecto</a>
+        </form>
+    </div>
+    <script src="./validar.js"></script>
+</body>
+
+</html>
