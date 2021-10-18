@@ -46,5 +46,5 @@ function validarExtension(file) {
 }
 
 function redirigir() {
-    window.location.href = 'https://aes-eha-lcas.herokuapp.com';
+    window.location.href = 'https://cifrar-aes-eha-lcas.herokuapp.com';
 }
